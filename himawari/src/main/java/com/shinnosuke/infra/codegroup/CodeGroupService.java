@@ -1,22 +1,19 @@
 package com.shinnosuke.infra.codegroup;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CodeGroupService {
 	
-//CodeGroupDao codegroupdao = new CodeGroupDao();
 	@Autowired
-	CodeGroupDao dao;
+	private CodeGroupDao CodeGroupDao;
 	
-	public void selectList() {
-		//codeGroup.selectList();
-		dao.selectList();
+	public List<CodeGroupDto> selectList() {
+		List<CodeGroupDto> codeGroups = CodeGroupDao.selectList();
+		return codeGroups;
 	}
-	
-	
-	
-	
 	
 }
