@@ -9,7 +9,7 @@ public class LectureDto {
 	private String lec_Name;
 	private String lec_Price;
 	private String lec_Instructor;
-	private String lec_StratCR;
+	private String lec_StartCR;
 	private String lec_EndCR;
 	private String lec_StartLearn;
 	private String lec_EndLearn;
@@ -51,11 +51,11 @@ public class LectureDto {
 	public void setLec_Instructor(String lec_Instructor) {
 		this.lec_Instructor = lec_Instructor;
 	}
-	public String getLec_StratCR() {
-		return lec_StratCR;
+	public String getLec_StartCR() {
+		return lec_StartCR;
 	}
-	public void setLec_StratCR(String lec_StratCR) {
-		this.lec_StratCR = lec_StratCR;
+	public void setLec_StartCR(String lec_StartCR) {
+		this.lec_StartCR = lec_StartCR;
 	}
 	public String getLec_EndCR() {
 		return lec_EndCR;
