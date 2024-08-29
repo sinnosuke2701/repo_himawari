@@ -10,10 +10,16 @@ public class CodeGroupService {
 	
 	
 	@Autowired
-	private CodeGroupDao CodeGroupDao;
-		List<CodeGroupDto> selectList(){
-			List<CodeGroupDto> codegroups =  CodeGroupDao.selectList();
-			return codegroups;
-		}
+//	private CodeGroupDao CodeGroupDao;
+//		List<CodeGroupDto> selectList(){
+//			List<CodeGroupDto> codegroups =  CodeGroupDao.selectList();
+//			return codegroups;
+//		}
 	
+		private CodeGroupDao CodeGroupDao;
+		List<CodeGroupDto> selectList(){
+			
+			return CodeGroupDao.selectList();
+		}
+		
 }

@@ -4,30 +4,37 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class CodeGroupController {
-	
+
 	@Autowired
-	CodeGroupService  CodeGroupService;
-	
+	CodeGroupService CodeGroupService;
+
 	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmList")
-	public String codeGroupXdmList() {
-		
+	public String codeGroupXdmList(Model model) {
+
 		List<CodeGroupDto> codegroups = CodeGroupService.selectList();
+
+		model.addAttribute("list",codegroups);
+		//모든객체를 html로 넘길때 model을 사용 / codegroups의 내용을 list 에 담아서 리턴으로 보냄 .
+//		model.addAttribute("list",CodeGroupService.selectList()); //내용을 담을게 없으면 축약형.
 		
-		for(CodeGroupDto codegroupdto  :codegroups) {
-			System.out.println(codegroupdto.getSeq() + " | " + codegroupdto.getCg_Name() + " | " + 
-								codegroupdto.getCg_UseNY() + " | " + codegroupdto.getCg_Order() + " | " + 
-								codegroupdto.getCg_Desc() + " | " + codegroupdto.getCg_ReDate() + " | " + 
-								codegroupdto.getCg_MoDate() + " | " + codegroupdto.getCg_DelNY());
-		}
 		
-	return "/xdm/v1/infra/codegroup/codeGroupXdmList";
 		
+//		System.out.println(codegroups.size());
+//		
+//		for (CodeGroupDto codegroupdto : codegroups) {
+//			System.out.println(codegroupdto.getSeq() + " | " + codegroupdto.getCg_Name() + " | "
+//					+ codegroupdto.getCg_UseNY() + " | " + codegroupdto.getCg_Order() + " | "
+//					+ codegroupdto.getCg_Desc() + " | " + codegroupdto.getCg_ReDate() + " | "
+//					+ codegroupdto.getCg_MoDate() + " | " + codegroupdto.getCg_DelNY());
+//		}
+
+		return "/xdm/v1/infra/codegroup/codeGroupXdmList";
+
 	}
-	
-	
-	
+
 }
