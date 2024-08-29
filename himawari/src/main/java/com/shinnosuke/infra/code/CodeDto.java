@@ -6,7 +6,7 @@ public class CodeDto {
 	
 	private String seq;
 	private String cd_Name;
-	private Integer cd_UseNy;
+	private Integer cd_UseNY;
 	private Integer cd_Order;
 	private String cd_Desc;
 	private Date cd_ReDate;
@@ -28,11 +28,11 @@ public class CodeDto {
 	public void setCd_Name(String cd_Name) {
 		this.cd_Name = cd_Name;
 	}
-	public Integer getCd_UseNy() {
-		return cd_UseNy;
+	public Integer getCd_UseNY() {
+		return cd_UseNY;
 	}
-	public void setCd_UseNy(Integer cd_UseNy) {
-		this.cd_UseNy = cd_UseNy;
+	public void setCd_UseNY(Integer cd_UseNY) {
+		this.cd_UseNY = cd_UseNY;
 	}
 	public Integer getCd_Order() {
 		return cd_Order;
