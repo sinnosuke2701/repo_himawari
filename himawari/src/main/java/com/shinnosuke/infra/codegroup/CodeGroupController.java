@@ -37,4 +37,20 @@ public class CodeGroupController {
 
 	}
 
+	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmForm")
+	public String codeGroupXdmForm() {
+		
+		return "/xdm/v1/infra/codegroup/codeGroupXdmForm";
+	}
+	
+	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmInst")
+	public String codeGroupXdmInst(CodeGroupDto CodeGroupDto) {
+		
+		System.out.println("CodeGroupDto.getCg_Name: " + CodeGroupDto.getCg_Name());
+		
+		CodeGroupService.insert(CodeGroupDto);
+		
+		return "redirect:/xdm/v1/infra/codegroup/codeGroupXdmList";
+	}
+	
 }

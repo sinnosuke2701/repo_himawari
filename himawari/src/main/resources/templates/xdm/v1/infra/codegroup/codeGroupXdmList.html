@@ -644,15 +644,15 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    	<tr th:if="${#lists.isEmpty(List)}" class="hover-actions-trigger btn-reveal-trigger position-static">
-                                                    		<td colspan="10">
-                                                    			<p class= "fs-0" style="padding-top: 12px;"> There are no data!</p>
-                                                    		</td>
-                                                    	</tr>
-                                                    	<tr class="hover-actions-trigger btn-reveal-trigger position-static"
-                                                    		onmouseover="this.style.background = 'red'" onmouseover="this.style.background= ''"
-                                                    		 th:if="${!#lists.isEmpty(List)}" th:each="list : ${list}" th:id="'trNum_' + ${list.seq}">
-                                                    	</tr>
+<!--                                                     	<tr th:if="${#lists.isEmpty(List)}" class="hover-actions-trigger btn-reveal-trigger position-static"> -->
+<!--                                                     		<td colspan="10"> -->
+<!--                                                     			<p class= "fs-0" style="padding-top: 12px;"> There are no data!</p> -->
+<!--                                                     		</td> -->
+<!--                                                     	</tr> -->
+<!--                                                     	<tr class="hover-actions-trigger btn-reveal-trigger position-static" -->
+<!--                                                     		onmouseover="this.style.background = 'red'" onmouseover="this.style.background= ''" -->
+<!--                                                     		 th:if="${!#lists.isEmpty(List)}" th:each="list : ${list}" th:id="'trNum_' + ${list.seq}"> -->
+<!--                                                     	</tr> -->
                                                         <tr>
                                                             <td>seq</td>
                                                             <td>이름</td>
@@ -662,6 +662,7 @@
                                                             <td>등록일</td>
                                                             <td>수정일</td>
                                                             <td>삭제여부</td>
+                                                            <td></td>
                                                         </tr>
                                                         <tr th:each="List : ${list}">
                                                             <td th:text = "${List.seq}"><input type="checkbox"></td>
@@ -671,7 +672,7 @@
                                                             <td th:text = "${List.cg_Order}"></td>
                                                             <td th:text = "${List.cg_Desc}"></td>
                                                             <th th:text = "${#dates.format(List.cg_ReDate)}"></th>
-                                                            <td th:text = "${#dates.format(List.cg_MoDate, '1999-09-03 07:34:27')}"></td>
+                                                            <td th:text = "${#dates.format(List.cg_MoDate)}"></td>
                                                             <td th:if = "${List.cg_DelNY eq 0}">N</td>
                                                             <td th:unless = "${List.cg_DelNY eq 0}">Y</td>
                                                         </tr>

@@ -22,4 +22,17 @@ public class CodeGroupService {
 			return CodeGroupDao.selectList();
 		}
 		
+		
+		//단축형..
+		public int insert(CodeGroupDto CodeGroupDto) {
+			return CodeGroupDao.insert(CodeGroupDto);
+		}
+
+		
+		
+//		public int insert(CodeGroupDto codeGroupDto) {
+//			int result = CodeGroupDao.insert(codeGroupDto);
+//			return result;
+//		}
+		
 }
