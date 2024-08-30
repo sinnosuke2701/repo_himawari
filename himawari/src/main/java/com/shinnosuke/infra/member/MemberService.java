@@ -14,4 +14,10 @@ public class MemberService {
 		List<MemberDto> members = MemberDao.selectList();
 			return members;
 		}
+	
+	public int insert(MemberDto MemberDto) {
+		int result = MemberDao.insert(MemberDto);
+		return result;
+	}
+	
 }

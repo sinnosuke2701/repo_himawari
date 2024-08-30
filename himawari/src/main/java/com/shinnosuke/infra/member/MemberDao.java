@@ -9,4 +9,6 @@ public interface MemberDao {
 	
 	List<MemberDto> selectList();
 	
+	public int insert(MemberDto MemberDto);
+	
 }

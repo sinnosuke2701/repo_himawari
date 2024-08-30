@@ -32,4 +32,18 @@ public class MemberController {
 	
 			return "/xdm/v1/infra/member/MemberXdm";
 	}
+	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmForm")
+	public String MemberXdmFrom(){
+		
+		return "/xdm/v1/infra/member/MemberXdmForm";
+	}
+	
+	@RequestMapping (value = "/xdm/v1/infra/member/MemberInst")
+	public String MemberInst(MemberDto MemberDto) {
+		
+		MemberService.insert(MemberDto);
+		
+		return "/xdm/v1/infra/member/MemberXdm";
+	}
+	
 }
