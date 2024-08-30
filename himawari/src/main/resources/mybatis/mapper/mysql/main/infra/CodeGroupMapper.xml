@@ -24,4 +24,24 @@
 			a.seq desc
 	</select>
 	
+	<insert id="insert">
+		insert into codegroup(
+    		cg_Name
+    		,cg_UseNY
+    		,cg_Order
+    		,cg_Desc
+    		,cg_ReDate
+    		,cg_MoDate
+    		,cg_DelNY
+		)value(
+    		#{cg_Name}
+    		,#{cg_UseNY}
+    		,#{cg_Order}
+    		,#{cg_Desc}
+    		,now()
+    		,now()
+    		,#{cg_DelNY}
+		)
+	</insert>
+	
 </mapper>
