@@ -39,9 +39,9 @@ public class MemberController {
 	}
 	
 	@RequestMapping (value = "/xdm/v1/infra/member/MemberInst")
-	public String MemberInst(MemberDto MemberDto) {
+	public String MemberInst(MemberDto MemberDto){//함수 선언
 		
-		MemberService.insert(MemberDto);
+		MemberService.insert(MemberDto); //함수 사용
 		
 		return "/xdm/v1/infra/member/MemberXdm";
 	}

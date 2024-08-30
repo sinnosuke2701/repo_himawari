@@ -573,13 +573,11 @@
 														<div class="card">
 															<div class="card-body">
 																<div class="">
-																	<label for="validationCustom04"
-																		class="form-label">관리자<span
-																			style="color: red;">*</span></label>
-																	<select class="form-select" id="validationCustom04"
-																		 name="cg_UseNY">
-																		<option selected disabled value="">선택해주세요
-																		</option>
+																	<label for="validationCustom04" class="form-label">관리자<span
+																		style="color: red;">*</span></label> <select
+																		class="form-select" id="validationCustom04"
+																		name="cg_UseNY">
+																		<option selected disabled value="">선택해주세요</option>
 																		<option value="1">관리자</option>
 																		<option value="0">회원</option>
 																	</select>
@@ -588,6 +586,7 @@
 															</div>
 														</div>
 													</div>
+												</div>
 												<div class="row mb-3">
 													<div class="col-md-3">
 														<div class="card">
@@ -606,14 +605,30 @@
 															</div>
 														</div>
 													</div>
-													<div class="row mb-3">
 													<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
 																<div>
 																	<div class="">
 																		<label for="validationCustom02"
-																			class="form-label">이름<span
+																			class="form-label">아이디<span
+																				style="color: red;">*</span></label>
+																		<input type="text" class="form-control"
+																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																		<!-- <div class="invalid-feedback">Please
+																					provide a valid zip.</div> -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="card">
+															<div class="card-body">
+																<div>
+																	<div class="">
+																		<label for="validationCustom02"
+																			class="form-label">비밀번호<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
@@ -629,45 +644,19 @@
 															<div class="card-body">
 																<div class="">
 																	<label for="validationCustom04"
-																		class="form-label">사용여부<span
+																		class="form-label">성별<span
 																			style="color: red;">*</span></label>
 																	<select class="form-select" id="validationCustom04"
 																		 name="cg_UseNY">
-																		<option selected disabled value="">사용 여부
+																		<option selected disabled value="">성별
 																		</option>
-																		<option value="1">사용</option>
-																		<option value="0">미사용</option>
+																		<option value="0">남성</option>
+																		<option value="1">여성</option>
+																		<option value="2">기타</option>
 																	</select>
 																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
 															</div>
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">
-																<div class="">
-																	<label for="validationCustom04"
-																		class="form-label">순서<span
-																			style="color: red;">*</span></label>
-																	<select class="form-select" id="validationCustom04"
-																		 name="cg_Order">
-																		<option selected disabled value="">순서
-																		</option>
-																		<option value = "1">1</option>
-																		<option value = "2">2</option>
-																	</select>
-																	<div class="invalid-feedback">선택하세요.</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail"
-																class="form-label">설명</label>
-															<input type="text" class="form-control" id="inputEmail"
-																placeholder="" name="cg_Desc">
 														</div>
 													</div>
 													<div class="col-md-3">
@@ -676,29 +665,63 @@
 																<div>
 																	<div class="">
 																		<label for="validationCustom02"
-																			class="form-label">등록일<span
+																			class="form-label">생년월일<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="validationCustom02" >
-																		<div class="invalid-feedback">입력하세요
-																		</div>
+																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																		<!-- <div class="invalid-feedback">Please
+																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-												<div class="col-md-3">
+													<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
 																<div>
 																	<div class="">
 																		<label for="validationCustom02"
-																			class="form-label">수정일<span
+																			class="form-label">이메일<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="validationCustom02" >
-																		<div class="invalid-feedback">입력하세요
-																		</div>
+																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																		<!-- <div class="invalid-feedback">Please
+																					provide a valid zip.</div> -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="card">
+															<div class="card-body">
+																<div>
+																	<div class="">
+																		<label for="validationCustom02"
+																			class="form-label">전화번호<span
+																				style="color: red;">*</span></label>
+																		<input type="text" class="form-control"
+																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																		<!-- <div class="invalid-feedback">Please
+																					provide a valid zip.</div> -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="card">
+															<div class="card-body">
+																<div>
+																	<div class="">
+																		<label for="validationCustom02"
+																			class="form-label">설명<span
+																				style="color: red;">*</span></label>
+																		<input type="text" class="form-control"
+																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																		<!-- <div class="invalid-feedback">Please
+																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
