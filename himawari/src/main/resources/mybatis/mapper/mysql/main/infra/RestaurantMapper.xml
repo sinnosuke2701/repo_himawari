@@ -46,20 +46,20 @@
 			,res_ReDate
 			,res_Modate
 			,res_DelNY
-		)value(
-			#{res_Type}
-			,#{res_Name}
-			,#{res_Open}
-			,#{res_Close}
-			,#{res_Tel}
-			,#{res_Address}
-			,#{res_Parking}
-			,#{res_Reservation}
-			,#{res_Corkage}
-			,#{res_Introduction}
-			,now()
-			,now()
-			,#{res_DelNY}
+		)values(
+    		#{res_Type}
+    		,#{res_Name}
+    		,#{res_Open}
+    		,#{res_Close}
+    		,#{res_Tel}
+            ,#{res_Address}
+            ,#{res_Parking}
+            ,#{res_Reservation}
+            ,#{res_Corkage}
+            ,#{res_Introduction}
+            ,now()
+            ,now()
+    		,#{res_DelNY}
 		)
 	</insert>
 </mapper>
