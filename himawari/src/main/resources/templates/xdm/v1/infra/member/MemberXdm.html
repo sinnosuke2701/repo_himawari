@@ -671,7 +671,7 @@
                                                             <td th:text = "${List.mem_Phone}"></td>
                                                             <td th:text = "${List.mem_Desc}"></td>
                                                             <th th:text = "${#dates.format(List.mem_ReDate)}"></th>
-                                                            <td th:text = "${#dates.format(List.mem_MoDate, '1999-09-03 07:34:27')}"></td>
+                                                            <td th:text = "${#dates.format(List.mem_MoDate)}"></td>
                                                             <td th:if = "${List.mem_DelNY eq 0}">N</td>
                                                             <td th:unless = "${List.mem_DelNY eq 0}">Y</td>
                                                         </tr>

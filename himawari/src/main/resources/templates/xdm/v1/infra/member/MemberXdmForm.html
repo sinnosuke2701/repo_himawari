@@ -573,10 +573,10 @@
 														<div class="card">
 															<div class="card-body">
 																<div class="">
-																	<label for="validationCustom04" class="form-label">관리자<span
+																	<label for="validationCustom04" class="form-label">권한<span
 																		style="color: red;">*</span></label> <select
 																		class="form-select" id="validationCustom04"
-																		name="cg_UseNY">
+																		name="mem_Authority">
 																		<option selected disabled value="">선택해주세요</option>
 																		<option value="1">관리자</option>
 																		<option value="0">회원</option>
@@ -597,7 +597,7 @@
 																			class="form-label">이름<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Name"  name="mem_Name" >
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -614,7 +614,7 @@
 																			class="form-label">아이디<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Id"  name="mem_Id">
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -631,7 +631,7 @@
 																			class="form-label">비밀번호<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Password"  name="mem_Password">
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -647,7 +647,7 @@
 																		class="form-label">성별<span
 																			style="color: red;">*</span></label>
 																	<select class="form-select" id="validationCustom04"
-																		 name="cg_UseNY">
+																		 name="mem_Gender">
 																		<option selected disabled value="">성별
 																		</option>
 																		<option value="0">남성</option>
@@ -668,7 +668,7 @@
 																			class="form-label">생년월일<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Birth"  name="mem_Birth" >
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -685,7 +685,7 @@
 																			class="form-label">이메일<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Email"  name="mem_Email">
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -702,7 +702,7 @@
 																			class="form-label">전화번호<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Phone"  name="mem_Phone">
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -719,7 +719,7 @@
 																			class="form-label">설명<span
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
-																			id="cg_Name"  name="cg_Name" th:value="${item?.cg_Name}">
+																			id="mem_Desc"  name="mem_Desc">
 																		<!-- <div class="invalid-feedback">Please
 																					provide a valid zip.</div> -->
 																	</div>
@@ -735,10 +735,10 @@
 																		class="form-label">삭제여부<span
 																			style="color: red;">*</span></label>
 																	<select class="form-select" id="validationCustom04"
-																		 name="cg_DelNY">
+																		 name="mem_DelNY">
 																		<option selected disabled value="">삭제 여부</option>
+																		<option value = "0">미삭제</option>
 																		<option value = "1">삭제</option>
-																		<option value = "2">미삭제</option>
 																	</select>
 																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
