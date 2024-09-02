@@ -569,24 +569,24 @@
 										<div class="container-fluid">
 											<div class="row mb-3">
 												<div class="row mb-3">
-<!-- 													<div class="col-md-3"> -->
-<!-- 														<div class="card"> -->
-<!-- 															<div class="card-body"> -->
-<!-- 																<div> -->
-<!-- 																	<div class=""> -->
-<!-- 																		<label for="validationCustom02" -->
-<!-- 																			class="form-label">seq<span -->
-<!-- 																				style="color: red;">*</span></label> -->
-<!-- 																		<input type="text" class="form-control" -->
-<!-- 																			id="seq"  name="seq" th:value="${item?.seq}"> -->
-<!-- 																		<div class="invalid-feedback">Please
-<!-- 																					provide a valid zip.</div> -->
-<!-- 																	</div> -->
-<!-- 																</div> -->
-<!-- 															</div> -->
-<!-- 														</div> -->
-<!-- 													</div> -->
-												
+													<div class="col-md-3">
+														<div class="card">
+															<div class="card-body">
+																<div>
+																	<div class="">
+																		<label for="validationCustom02"
+																			class="form-label">seq<span
+																				style="color: red;">*</span></label>
+																		<input type="text" class="form-control"
+																			id="seq"  name="seq" th:value="${item?.seq}">
+																		<!-- <div class="invalid-feedback">Please
+																					provide a valid zip.</div> -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												<div class="row mb-3">
 													<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
@@ -626,16 +626,18 @@
 													<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
-																<div>
-																	<div class="">
-																		<label for="validationCustom02"
-																			class="form-label">순서<span
-																				style="color: red;">*</span></label>
-																		<input type="text" class="form-control"
-																			id="cg_Order"  name="cg_Order" >
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
-																	</div>
+																<div class="">
+																	<label for="validationCustom04"
+																		class="form-label">순서<span
+																			style="color: red;">*</span></label>
+																	<select class="form-select" id="validationCustom04"
+																		 name="cg_Order">
+																		<option selected disabled value="">순서
+																		</option>
+																		<option value = "1">1</option>
+																		<option value = "2">2</option>
+																	</select>
+																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
 															</div>
 														</div>
@@ -648,40 +650,40 @@
 																placeholder="" name="cg_Desc">
 														</div>
 													</div>
-<!-- 													<div class="col-md-3"> -->
-<!-- 														<div class="card"> -->
-<!-- 															<div class="card-body"> -->
-<!-- 																<div> -->
-<!-- 																	<div class=""> -->
-<!-- 																		<label for="validationCustom02" -->
-<!-- 																			class="form-label">등록일<span -->
-<!-- 																				style="color: red;">*</span></label> -->
-<!-- 																		<input type="text" class="form-control" -->
-<!-- 																			id="validationCustom02" > -->
-<!-- 																		<div class="invalid-feedback">입력하세요 -->
-<!-- 																		</div> -->
-<!-- 																	</div> -->
-<!-- 																</div> -->
-<!-- 															</div> -->
-<!-- 														</div> -->
-<!-- 													</div> -->
-<!-- 												<div class="col-md-3"> -->
-<!-- 														<div class="card"> -->
-<!-- 															<div class="card-body"> -->
-<!-- 																<div> -->
-<!-- 																	<div class=""> -->
-<!-- 																		<label for="validationCustom02" -->
-<!-- 																			class="form-label">수정일<span -->
-<!-- 																				style="color: red;">*</span></label> -->
-<!-- 																		<input type="text" class="form-control" -->
-<!-- 																			id="validationCustom02" > -->
-<!-- 																		<div class="invalid-feedback">입력하세요 -->
-<!-- 																		</div> -->
-<!-- 																	</div> -->
-<!-- 																</div> -->
-<!-- 															</div> -->
-<!-- 														</div> -->
-<!-- 													</div> -->
+													<div class="col-md-3">
+														<div class="card">
+															<div class="card-body">
+																<div>
+																	<div class="">
+																		<label for="validationCustom02"
+																			class="form-label">등록일<span
+																				style="color: red;">*</span></label>
+																		<input type="text" class="form-control"
+																			id="validationCustom02" >
+																		<div class="invalid-feedback">입력하세요
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												<div class="col-md-3">
+														<div class="card">
+															<div class="card-body">
+																<div>
+																	<div class="">
+																		<label for="validationCustom02"
+																			class="form-label">수정일<span
+																				style="color: red;">*</span></label>
+																		<input type="text" class="form-control"
+																			id="validationCustom02" >
+																		<div class="invalid-feedback">입력하세요
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
@@ -692,8 +694,8 @@
 																	<select class="form-select" id="validationCustom04"
 																		 name="cg_DelNY">
 																		<option selected disabled value="">삭제 여부</option>
-																		<option value = "0">미삭제</option>
 																		<option value = "1">삭제</option>
+																		<option value = "2">미삭제</option>
 																	</select>
 																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
