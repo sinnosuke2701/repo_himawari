@@ -46,4 +46,10 @@ public class MemberController {
 		return "redirect:/xdm/v1/infra/member/MemberXdmList";
 	}
 	
+	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmMfom")
+	public String MemberXdmMfom() {
+		
+		return "/xdm/v1/infra/member/MemberXdmMfom";
+	}
+	
 }

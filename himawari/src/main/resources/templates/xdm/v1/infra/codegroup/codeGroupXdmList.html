@@ -668,7 +668,7 @@
                                                             <td th:text = "${List.seq}"><input type="checkbox"></td>
 <!--                                                             <td ><a href="/xdm/v1/infra/codegroup/codeGroupXdmMfom?seq=1" th:text = "${List.cg_Name}">?</a></td> -->
                                                             <td><a th:href="@{/xdm/v1/infra/codegroup/codeGroupXdmMfom(seq=${List.seq})}" th:text="${List.cg_Name}"></a></td>
-
+<!--                                                             주석친게 get방식 아래가 타임리프방식 -->
                                                             <td th:if = "${List.cg_UseNY eq 0}">N</td>
                                                             <td th:unless="${List.cg_UseNY eq 0}">Y</td>
                                                             <td th:text = "${List.cg_Order}"></td>
