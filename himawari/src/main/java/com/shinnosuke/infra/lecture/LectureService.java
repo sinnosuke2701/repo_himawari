@@ -1,4 +1,4 @@
-package com.shinnosuke.infra.lecture;
+	package com.shinnosuke.infra.lecture;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ public class LectureService {
 
 	@Autowired
 	private LectureDao LectureDao;
+	
 		List<LectureDto> selectList(){
 			List<LectureDto> lectures = LectureDao.selectList();
 			

@@ -413,7 +413,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육형태(온라인,오프라인,온오프라인)<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_Type" name="lec_Type">
+																			class="form-control" name="lec_Type">
 																	</div>
 																</div>
 															</div>
@@ -426,7 +426,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">강의명<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_Name" name="lec_Name">
+																			class="form-control" name="lec_Name">
 																	</div>
 																</div>
 															</div>
@@ -439,8 +439,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육비<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_Price"
-																			name="lec_Price">
+																			class="form-control" name="lec_Price">
 																	</div>
 																</div>
 															</div>
@@ -453,7 +452,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">강사<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_Instructor" name="lec_Instructor">
+																			class="form-control" name="lec_Instructor">
 																	</div>
 																</div>
 															</div>
@@ -464,9 +463,10 @@
 															<div class="card-body">
 																<div>
 																	<div class="">
-																		<label for="validationCustom02" class="form-label">수강신청시작<span
-																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_StartCr" name="lec_StartCr">
+																		<label for="validationCustom02" class="form-label">수강신청시작
+																		<span style="color: red;">*</span>
+																		</label> 
+																		<input type="text"class="form-control" id="lec_StartCR" name="lec_StartCR">
 																	</div>
 																</div>
 															</div>
@@ -478,8 +478,9 @@
 																<div>
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">수강신청마감<span
-																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_EndCr" name="lec_EndCr">
+																			style="color: red;">*</span></label> 
+																			<input type="text"
+																			class="form-control" id="lec_EndCR" name="lec_EndCR">
 																	</div>
 																</div>
 															</div>
@@ -491,8 +492,9 @@
 																<div>
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">학습시작기간<span
-																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_StratLearn" name="lec_StratLearn">
+																			style="color: red;">*</span></label> 
+																			<input type="text"
+																			class="form-control" id="lec_StartLearn" name="lec_StartLearn">
 																	</div>
 																</div>
 															</div>
@@ -504,7 +506,8 @@
 																<div>
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">학습마감기간<span
-																			style="color: red;">*</span></label> <input type="text"
+																			style="color: red;">*</span></label> 
+																			<input type="text"
 																			class="form-control" id="lec_EndLearn" name="lec_EndLearn">
 																	</div>
 																</div>
@@ -518,7 +521,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육장소<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_Place" name="lec_Place">
+																			class="form-control" name="lec_Place">
 																	</div>
 																</div>
 															</div>
@@ -541,19 +544,21 @@
 														<div class="card">
 															<div class="card-body">
 																<div class="">
-																	<label for="validationCustom04" class="form-label">삭제여부<span
-																		style="color: red;">*</span></label> <select
-																		class="form-select" id="validationCustom04"
-																		name="lec_DelNY">
+																	<label for="validationCustom04"
+																		class="form-label">삭제여부<span
+																			style="color: red;">*</span></label>
+																	<select class="form-select" id="validationCustom04"
+																		 name="lec_DelNY">
 																		<option selected disabled value="">삭제 여부</option>
-																		<option value="0">미삭제</option>
-																		<option value="1">삭제</option>
+																		<option value = "0">미삭제</option>
+																		<option value = "1">삭제</option>
 																	</select>
 																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
 															</div>
 														</div>
 													</div>
+													
 												</div>
 												<div class="row mb-3">
 													<div class="col">

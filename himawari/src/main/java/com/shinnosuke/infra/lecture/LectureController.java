@@ -38,6 +38,7 @@ public class LectureController {
 	
 	@RequestMapping(value = "/xdm/v1/infra/lecture/LectureXdmInst")
 	public String LectureXdmInst(LectureDto LectureDto) {
+//		System.out.println(LectureDto.getLec_StartLearn());
 		LectureService.insert(LectureDto);
 		return "redirect:/xdm/v1/infra/lecture/LectureXdmList";
 	}
