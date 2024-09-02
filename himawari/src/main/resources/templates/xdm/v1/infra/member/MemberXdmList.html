@@ -662,7 +662,8 @@
                                                         <tr th:each="List : ${list3}">
                                                             <td th:text = "${List.seq}"><input type="checkbox"></td>
                                                             <td th:text = "${List.mem_Authority}"></td>
-                                                            <td th:text = "${List.mem_Name}"><a></a></td>
+                                                            <td><a th:href="@{/xdm/v1/infra/member/MemberXdmMfom(seq=${List.seq})}" th:text = "${List.mem_Name}">></a></td>
+<!--                                                             <td><a th:href="@{/xdm/v1/infra/codegroup/codeGroupXdmMfom(seq=${List.seq})}" th:text="${List.cg_Name}"></a></td> -->
                                                             <td th:text = "${List.mem_Id}"></td>
                                                             <td th:text = "${List.mem_Password}"></td>
                                                             <td th:text = "${List.mem_Gender}"></td>
