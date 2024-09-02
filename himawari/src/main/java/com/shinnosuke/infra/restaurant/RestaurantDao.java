@@ -9,4 +9,6 @@ public interface RestaurantDao {
 	
 	List<RestaurantDto> selectList();
 	
+	public int insert(RestaurantDto RestaurantDto);
+	
 }

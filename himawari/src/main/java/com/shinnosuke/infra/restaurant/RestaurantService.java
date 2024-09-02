@@ -15,4 +15,9 @@ public class RestaurantService {
 			return restaurants;
 		}
 	
+		public int insert(RestaurantDto RestaurantDto) {
+			
+		int result = RestaurantDao.insert(RestaurantDto);
+			return result;
+		}
 }

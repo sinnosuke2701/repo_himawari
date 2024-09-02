@@ -6,28 +6,60 @@
 	<!-- xml 에서 주석 단축키 : ctrl + shift + C -->
 
 	<!-- resultMap : 결과를 담아줄 그으르읏 -->
-	<resultMap type="com.shinnosuke.infra.restaurant.RestaurantDto" id="resultMapObj"></resultMap>
+	<resultMap
+		type="com.shinnosuke.infra.restaurant.RestaurantDto" id="resultMapObj"></resultMap>
 
 	<select id="selectList" resultMap="resultMapObj">
 		select
-			a.seq
-    		,a.res_Type
-    		,a.res_Name
-    		,a.res_Open
-    		,a.res_Close
-    		,a.res_Tel
-    		,a.res_Address
-    		,a.res_Parking
-    		,a.res_Reservation
-    		,a.res_Corkage
-    		,a.res_Introduction
-    		,a.res_ReDate
-    		,a.res_MoDate
-    		,a.res_DelNY
+		a.seq
+		,a.res_Type
+		,a.res_Name
+		,a.res_Open
+		,a.res_Close
+		,a.res_Tel
+		,a.res_Address
+		,a.res_Parking
+		,a.res_Reservation
+		,a.res_Corkage
+		,a.res_Introduction
+		,a.res_ReDate
+		,a.res_MoDate
+		,a.res_DelNY
 		from
-			restaurant a
+		restaurant a
 		order by
-			a.seq
+		a.seq
 	</select>
-	
+
+	<insert id="insert">
+		insert into restaurant(
+			res_Type
+			,res_Name
+			,res_Open
+			,res_Close
+			,res_Tel
+			,res_Address
+			,res_Parking
+			,res_Reservation
+			,res_Corkage
+			,res_Introduction
+			,res_ReDate
+			,res_Modate
+			,res_DelNY
+		)value(
+			#{res_Type}
+			,#{res_Name}
+			,#{res_Open}
+			,#{res_Close}
+			,#{res_Tel}
+			,#{res_Address}
+			,#{res_Parking}
+			,#{res_Reservation}
+			,#{res_Corkage}
+			,#{res_Introduction}
+			,now()
+			,now()
+			,#{res_DelNY}
+		)
+	</insert>
 </mapper>
