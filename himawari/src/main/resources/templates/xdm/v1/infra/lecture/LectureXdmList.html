@@ -673,7 +673,7 @@
                                                             <td th:text = "${List.lec_Place}"></td>
                                                             <td th:text = "${List.lec_Detail}"></td>
                                                             <th th:text = "${#dates.format(List.lec_ReDate)}"></th>
-                                                            <td th:text = "${#dates.format(List.lec_MoDate, '1999-09-03 07:34:27')}"></td>
+                                                            <td th:text = "${#dates.format(List.lec_MoDate)}"></td>
                                                             <td th:if = "${List.lec_DelNY eq 0}">N</td>
                                                             <td th:unless = "${List.lec_DelNY eq 0}">Y</td>
                                                         </tr>

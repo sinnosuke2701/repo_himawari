@@ -16,4 +16,9 @@ public class LectureService {
 			return lectures;
 		}
 	
+		public int insert(LectureDto LectureDto) {
+			int result = LectureDao.insert(LectureDto);
+			return result;
+		}
+		
 }

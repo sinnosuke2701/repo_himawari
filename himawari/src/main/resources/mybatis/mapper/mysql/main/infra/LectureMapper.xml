@@ -30,4 +30,35 @@
 			a.seq
 	</select>
 	
+	<insert id = "insert">
+		insert into lecture(
+		 lec_Type
+		 ,lec_Name
+		 ,lec_Price
+		 ,lec_Instructor
+		 ,lec_StartCR
+         ,lec_EndCR
+         ,lec_StartLearn
+         ,lec_EndLearn
+         ,lec_Place
+         ,lec_Detail
+         ,lec_ReDate
+		 ,lec_MoDate
+		 ,lec_DelNY
+		)value(
+		  #{lec_Type}
+		 ,#{lec_Name}
+		 ,#{lec_Price}
+		 ,#{lec_Instructor}
+		 ,#{lec_StartCR}
+         ,#{lec_EndCR}
+         ,#{lec_StartLearn}
+         ,#{lec_EndLearn}
+         ,#{lec_Place}
+         ,#{lec_Detail}
+         ,now()
+		 ,now()
+		 ,#{lec_DelNY}
+		)
+	</insert>
 </mapper>
