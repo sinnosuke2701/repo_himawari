@@ -43,7 +43,7 @@
             ,mem_ReDate
     		,mem_MoDate
     		,mem_DelNY
-		)value(
+		)values(
     		#{mem_Authority}
     		,#{mem_Name}
     		,#{mem_Id}

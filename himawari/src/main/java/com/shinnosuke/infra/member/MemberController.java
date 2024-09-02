@@ -13,8 +13,8 @@ public class MemberController {
 	@Autowired
 	MemberService MemberService;
 	
-	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdm")
-	public String MemberXdm(Model model) {
+	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmList")
+	public String MemberXdmList(Model model) {
 		
 		
 		
@@ -30,7 +30,7 @@ public class MemberController {
 //								memberdto.getMem_DelNY());
 //		}
 	
-			return "/xdm/v1/infra/member/MemberXdm";
+			return "/xdm/v1/infra/member/MemberXdmList";
 	}
 	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmForm")
 	public String MemberXdmFrom(){
@@ -43,7 +43,7 @@ public class MemberController {
 		
 		MemberService.insert(MemberDto); //함수 사용
 		
-		return "redirect:/xdm/v1/infra/member/MemberXdm";
+		return "redirect:/xdm/v1/infra/member/MemberXdmList";
 	}
 	
 }
