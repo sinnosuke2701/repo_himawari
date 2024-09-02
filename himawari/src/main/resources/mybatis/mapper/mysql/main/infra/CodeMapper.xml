@@ -25,4 +25,34 @@
 			a.seq desc
 	</select>
 	
+	<insert id="insert">
+		insert into member1(
+    		mem_Authority
+    		,mem_Name
+    		,mem_Id
+    		,mem_Password
+    		,mem_Gender
+         	,mem_Birth
+         	,mem_Email
+         	,mem_Phone
+         	,mem_Desc
+         	,mem_ReDate
+    		,mem_MoDate
+    		,mem_DelNY
+		)value(
+    		#{mem_Authority}
+    		,#{mem_Name}
+    		,#{mem_Id}
+    		,#{mem_Password}
+    		,#{mem_Gender}
+         	,#{mem_Birth}
+         	,#{mem_Email}
+         	,#{mem_Phone}
+         	,#{mem_Desc}
+         	,now()
+    		,now()
+    		,#{mem_DelNY}
+		)
+	</insert>
+	
 </mapper>
