@@ -33,12 +33,13 @@ public class RestaurantController {
 	}
 
 	@RequestMapping(value = "/xdm/v1/infra/restaurant/RestaurantXdmForm")
-
 	public String RestaurantXdmForm() {
-
+		
 		return "/xdm/v1/infra/restaurant/RestaurantXdmForm";
 	}
 
+	
+	
 	@RequestMapping(value = "/xdm/v1/infra/restaurant/RestaurantXdmInst")
 			public String RestaurantXdmInst(RestaurantDto RestaurantDto) {
 		
@@ -46,5 +47,18 @@ public class RestaurantController {
 		
 		return "redirect:/xdm/v1/infra/restaurant/RestaurantXdmList";
 	}
-
+	
+//	@RequestMapping(value = "/xdm/v1/infra/restaurant/RestaurantXdmMfom")
+//	public String RestaurantXdmMfom(RestaurantDto restaurantDto,Model model) {
+//		RestaurantDto dto = RestaurantService.selectOne(restaurantDto);
+//		model.addAttribute("item",dto);
+//		return "/xdm/v1/infra/restaurant/RestaurantXdmMfom";
+//	}
+	
+	@RequestMapping(value = "/xdm/v1/infra/restaurant/RestaurantXdmMfom")
+	public String RestaurantXdmMfom(RestaurantDto restaurantDto,Model model) {
+		model.addAttribute("item",RestaurantService.selectOne(restaurantDto));
+		return "/xdm/v1/infra/restaurant/RestaurantXdmMfom";
+	}
+	
 }

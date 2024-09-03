@@ -62,4 +62,26 @@
     		,#{res_DelNY}
 		)
 	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		select	
+			a.seq
+			,a.res_Type
+			,a.res_Name
+			,a.res_Open
+			,a.res_Close
+			,a.res_Tel
+			,a.res_Address
+			,a.res_Parking
+			,a.res_Reservation
+			,a.res_Corkage
+			,a.res_Introduction
+			,a.res_ReDate
+			,a.res_MoDate
+			,a.res_DelNY
+		from
+			restaurant a
+		where 1=1
+			and a.seq = #{seq}
+	</select>
 </mapper>

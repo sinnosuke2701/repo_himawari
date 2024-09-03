@@ -663,7 +663,7 @@
                                                         <tr th:each="List : ${list4}">
                                                             <td th:text = "${List.seq}"></td>
                                                             <td th:text = "${List.res_Type}"></td>
-                                                            <td th:text = "${List.res_Name}"></td>
+                                                            <td><a th:href="@{/xdm/v1/infra/restaurant/RestaurantXdmMfom(seq=${List.seq})}" th:text = "${List.res_Name}"></a></td>
                                                             <td th:text = "${List.res_Open}"></td>
                                                             <td th:text = "${List.res_Close}"></td>
                                                             <th th:text = "${List.res_Tel}"></th>

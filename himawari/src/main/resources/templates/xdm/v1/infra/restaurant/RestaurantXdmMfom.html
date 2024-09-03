@@ -413,7 +413,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">식당업종(한식,중식,일식,분식)<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Type">
+																			class="form-control" name="res_Type" th:value="${item?.res_Type}">
 																	</div>
 																</div>
 															</div>
@@ -426,7 +426,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">식당이름<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Name">
+																			class="form-control" name="res_Name" th:value="${item?.res_Name}">
 																	</div>
 																</div>
 															</div>
@@ -439,7 +439,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">영업시작<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Open">
+																			class="form-control" name="res_Open" th:value="${item?.res_Open}">
 																	</div>
 																</div>
 															</div>
@@ -452,7 +452,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">영업마감<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control"name="res_Close">
+																			class="form-control"name="res_Close" th:value="${item?.res_Close}">
 																	</div>
 																</div>
 															</div>
@@ -465,7 +465,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">전화번호<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Tel">
+																			class="form-control" name="res_Tel" th:value="${item?.res_Tel}">
 																	</div>
 																</div>
 															</div>
@@ -478,7 +478,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">인터넷주소<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Address">
+																			class="form-control" name="res_Address" th:value="${item?.res_Address}">
 																	</div>
 																</div>
 															</div>
@@ -491,7 +491,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">주차 가능 여부<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Parking">
+																			class="form-control" name="res_Parking" th:value="${item?.res_Parking}">
 																	</div>
 																</div>
 															</div>
@@ -504,7 +504,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">예약가능여부<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Reservation">
+																			class="form-control" name="res_Reservation" th:value="${item?.res_Reservation}">
 																	</div>
 																</div>
 															</div>
@@ -517,7 +517,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">콜키지 가능 여부<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Corkage">
+																			class="form-control" name="res_Corkage" th:value="${item?.res_Corkage}">
 																	</div>
 																</div>
 															</div>
@@ -530,26 +530,24 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">소개글<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="res_Introduction">
+																			class="form-control" name="res_Introduction" th:value="${item?.res_Introduction}">
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-													
 													<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
 																<div class="">
-																	<label for="validationCustom04" class="form-label">삭제여부<span
+																	<label for="validationCustom04" class="form-label">삭제 여부<span
 																		style="color: red;">*</span></label> <select
 																		class="form-select" id="validationCustom04"
 																		name="res_DelNY">
 																		<option selected disabled value="">삭제 여부</option>
-																		<option value="0">미삭제</option>
-																		<option value="1">삭제</option>
+																		<option value="0" th:selected="${item?.res_DelNY == 0}">미삭제</option>
+																		<option value="1" th:selected="${item?.res_DelNY == 1}">삭제</option>
 																	</select>
-																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
 															</div>
 														</div>

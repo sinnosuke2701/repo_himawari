@@ -20,4 +20,10 @@ public class RestaurantService {
 		int result = RestaurantDao.insert(RestaurantDto);
 			return result;
 		}
+		
+		public RestaurantDto selectOne(RestaurantDto restaurantDto) {
+			RestaurantDto dto = RestaurantDao.selectOne(restaurantDto);
+			return dto;
+		}
+		
 }

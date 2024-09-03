@@ -11,4 +11,6 @@ public interface RestaurantDao {
 	
 	public int insert(RestaurantDto RestaurantDto);
 	
+	public RestaurantDto selectOne(RestaurantDto restaurantDto);
+	
 }
