@@ -39,16 +39,23 @@ public class MemberController {
 	}
 	
 	@RequestMapping (value = "/xdm/v1/infra/member/MemberXdmInst")
-	public String MemberXdmInst(MemberDto MemberDto){//함수 선언
+	public String MemberXdmInst(MemberDto memberDto){//함수 선언
 		
-		MemberService.insert(MemberDto); //함수 사용
+		MemberService.insert(memberDto); //함수 사용
 		
 		return "redirect:/xdm/v1/infra/member/MemberXdmList";
 	}
 	
+//	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmMfom")
+//	public String MemberXdmMfom(MemberDto memberDto,Model model) {
+//		MemberDto dto = MemberService.selectOne(memberDto);
+//		model.addAttribute("item",dto);
+//		return "/xdm/v1/infra/member/MemberXdmMfom";
+//	}
+	
 	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmMfom")
-	public String MemberXdmMfom() {
-		
+	public String MemberXdmMfom(MemberDto memberDto,Model model) {
+		model.addAttribute("item",MemberService.selectOne(memberDto));
 		return "/xdm/v1/infra/member/MemberXdmMfom";
 	}
 	
