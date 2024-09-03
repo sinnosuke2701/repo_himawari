@@ -547,7 +547,7 @@
 				<li class="breadcrumb-item breadcrumb-active" aria-current="page">Default</li>
 			</ol>
 			<!-- Breadcrumb end -->
-			<h3>CodeGroup</h3>
+			<h3>Member</h3>
 			<!-- Content wrapper scroll start -->
 			<div class="content-wrapper-scroll">
 
@@ -568,26 +568,23 @@
 									<div class="card-body">
 										<div class="container-fluid">
 											<div class="row mb-3">
-												<div class="row mb-3">
-													<div class="col-md-3">
+												<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
 																<div class="">
-																	<label for="validationCustom04" class="form-label">권한<span
-																		style="color: red;">*</span></label> <select
-																		class="form-select" id="validationCustom04"
-																		name="mem_Authority">
-																		<option selected disabled value="">선택해주세요</option>
-																		<option value="1">관리자</option>
-																		<option value="0">회원</option>
+																	<label for="validationCustom04"
+																		class="form-label">권한 여부<span
+																			style="color: red;">*</span></label>
+																	<select class="form-select" id="mem_DelNY"
+																		 name="mem_Authority">
+																		<option selected disabled value="">권한 여부</option>
+																		<option value = "0" th:selected="${item?.mem_Authority == 0}">회원</option>
+																		<option value = "1" th:selected="${item?.mem_Authority == 1}">관리자</option>
 																	</select>
-																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-												<div class="row mb-3">
 													<div class="col-md-3">
 														<div class="card">
 															<div class="card-body">
@@ -598,8 +595,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Name"  name="mem_Name" >
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -615,8 +610,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Id"  name="mem_Id">
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -632,8 +625,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Password"  name="mem_Password">
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -669,8 +660,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Birth"  name="mem_Birth" >
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -686,8 +675,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Email"  name="mem_Email">
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -703,8 +690,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Phone"  name="mem_Phone">
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -720,8 +705,6 @@
 																				style="color: red;">*</span></label>
 																		<input type="text" class="form-control"
 																			id="mem_Desc"  name="mem_Desc">
-																		<!-- <div class="invalid-feedback">Please
-																					provide a valid zip.</div> -->
 																	</div>
 																</div>
 															</div>
@@ -745,129 +728,6 @@
 															</div>
 														</div>
 													</div>
-												<div class="row mb-3">
-													<div class="col">
-														<div class="col-sm-6 col-sm-6">
-															<div class="mb-3">
-																<label for="inputMessage" class="form-label">설명</label>
-																<textarea class="form-control" id="inputMessage"
-																	rows="3"></textarea>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row mb-3">
-													<div class="col">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어1</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어2</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어3</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어4</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-												</div>
-												<div class="row mb-3">
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어5</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어6</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어7</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">다국어8</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-												</div>
-												<div class="row mb-3">
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비1
-																(VARCHAR TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비2
-																(VARCHAR TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비3
-																(VARCHAR TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비4
-																(VARCHAR TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-												</div>
-												<div class="row mb-3">
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비1 (INT
-																TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비2 (INT
-																TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비3 (INT
-																TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="mb-3">
-															<label for="inputEmail" class="form-label">예비4 (INT
-																TYPE)</label>
-															<input type="email" class="form-control" id="inputEmail">
-														</div>
-													</div>
-												</div>
 												<div class="row mb-3">
 													<div class="col">
 														<button type="button" id='seobin' class="btn btn-white">

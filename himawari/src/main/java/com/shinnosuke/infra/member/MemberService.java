@@ -15,9 +15,19 @@ public class MemberService {
 			return members;
 		}
 	
-	public int insert(MemberDto MemberDto) {
-		int result = MemberDao.insert(MemberDto);
+	public int insert(MemberDto memberDto) {
+		int result = MemberDao.insert(memberDto);
 		return result;
 	}
+	
+	public MemberDto selectOne(MemberDto memberDto) {
+		return MemberDao.selectOne(memberDto);
+	}
+	
+//	public MemberDto selectOne(MemberDto memberDto) {
+//		MemberDto dto = MemberDao.selectOne(memberDto);
+//		return dto;
+//	}
+	
 	
 }

@@ -646,7 +646,7 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>seq</td>
-                                                            <td>관리자 권한</td>
+                                                            <td>관리자권한</td>
                                                             <td>이름</td>
                                                             <td>아이디</td>
                                                             <td>비밀번호</td>
@@ -661,12 +661,15 @@
                                                         </tr>
                                                         <tr th:each="List : ${list3}">
                                                             <td th:text = "${List.seq}"><input type="checkbox"></td>
-                                                            <td th:text = "${List.mem_Authority}"></td>
+                                                            <td th:if = "${List.mem_Authority eq 0}">회원</td>
+                                                            <td th:unless = "${List.mem_Authority eq 0}">관리자</td>
                                                             <td><a th:href="@{/xdm/v1/infra/member/MemberXdmMfom(seq=${List.seq})}" th:text = "${List.mem_Name}">></a></td>
 <!--                                                             <td><a th:href="@{/xdm/v1/infra/codegroup/codeGroupXdmMfom(seq=${List.seq})}" th:text="${List.cg_Name}"></a></td> -->
                                                             <td th:text = "${List.mem_Id}"></td>
                                                             <td th:text = "${List.mem_Password}"></td>
-                                                            <td th:text = "${List.mem_Gender}"></td>
+                                                            <td th:if = "${List.mem_Gender eq 0}">남성</td>
+                                                            <td th:if = "${List.mem_Gender eq 1}">여성</td>
+                                                            <td th:unless="${List.mem_Gender eq 0 or List.mem_Gender eq 1}">기타</td>
                                                             <td th:text = "${List.mem_Birth}"></td>
                                                             <td th:text = "${List.mem_Email}"></td>
                                                             <td th:text = "${List.mem_Phone}"></td>
