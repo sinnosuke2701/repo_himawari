@@ -11,4 +11,6 @@ public interface LectureDao {
 	
 	public int insert(LectureDto LectureDto);
 	
+	public LectureDto selectOne(LectureDto lectureDto);
+	
 }

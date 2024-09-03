@@ -413,7 +413,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육형태(온라인,오프라인,온오프라인)<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="lec_Type">
+																			class="form-control" name="lec_Type" th:value="${item?.lec_Type}">
 																	</div>
 																</div>
 															</div>
@@ -426,7 +426,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">강의명<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="lec_Name">
+																			class="form-control" name="lec_Name" th:value="${item?.lec_Name}">
 																	</div>
 																</div>
 															</div>
@@ -439,7 +439,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육비<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="lec_Price">
+																			class="form-control" name="lec_Price" th:value="${item?.lec_Price}">
 																	</div>
 																</div>
 															</div>
@@ -452,7 +452,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">강사<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="lec_Instructor">
+																			class="form-control" name="lec_Instructor" th:value="${item?.lec_Instructor}">
 																	</div>
 																</div>
 															</div>
@@ -466,7 +466,7 @@
 																		<label for="validationCustom02" class="form-label">수강신청시작
 																		<span style="color: red;">*</span>
 																		</label> 
-																		<input type="text"class="form-control" id="lec_StartCR" name="lec_StartCR">
+																		<input type="text"class="form-control" id="lec_StartCR" name="lec_StartCR" th:value="${item?.lec_StartCR}">
 																	</div>
 																</div>
 															</div>
@@ -480,7 +480,7 @@
 																		<label for="validationCustom02" class="form-label">수강신청마감<span
 																			style="color: red;">*</span></label> 
 																			<input type="text"
-																			class="form-control" id="lec_EndCR" name="lec_EndCR">
+																			class="form-control" id="lec_EndCR" name="lec_EndCR" th:value="${item?.lec_EndCR}">
 																	</div>
 																</div>
 															</div>
@@ -494,7 +494,7 @@
 																		<label for="validationCustom02" class="form-label">학습시작기간<span
 																			style="color: red;">*</span></label> 
 																			<input type="text"
-																			class="form-control" id="lec_StartLearn" name="lec_StartLearn">
+																			class="form-control" id="lec_StartLearn" name="lec_StartLearn" th:value="${item?.lec_StartLearn}">
 																	</div>
 																</div>
 															</div>
@@ -508,7 +508,7 @@
 																		<label for="validationCustom02" class="form-label">학습마감기간<span
 																			style="color: red;">*</span></label> 
 																			<input type="text"
-																			class="form-control" id="lec_EndLearn" name="lec_EndLearn">
+																			class="form-control" id="lec_EndLearn" name="lec_EndLearn" th:value="${item?.lec_EndLearn}">
 																	</div>
 																</div>
 															</div>
@@ -521,7 +521,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육장소<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" name="lec_Place">
+																			class="form-control" name="lec_Place" th:value="${item?.lec_Place}">
 																	</div>
 																</div>
 															</div>
@@ -534,7 +534,7 @@
 																	<div class="">
 																		<label for="validationCustom02" class="form-label">교육내용<span
 																			style="color: red;">*</span></label> <input type="text"
-																			class="form-control" id="lec_Detail" name="lec_Detail">
+																			class="form-control" id="lec_Detail" name="lec_Detail" th:value="${item?.lec_Detail}">
 																	</div>
 																</div>
 															</div>
@@ -550,10 +550,9 @@
 																	<select class="form-select" id="validationCustom04"
 																		 name="lec_DelNY">
 																		<option selected disabled value="">삭제 여부</option>
-																		<option value = "0">미삭제</option>
-																		<option value = "1">삭제</option>
+																		<option value = "0" th:selected="${item?.lec_DelNY == 0}">미삭제</option>
+																		<option value = "1" th:selected="${item?.lec_DelNY == 1}">삭제</option>
 																	</select>
-																	<div class="invalid-feedback">선택하세요.</div>
 																</div>
 															</div>
 														</div>

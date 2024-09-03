@@ -37,10 +37,23 @@ public class LectureController {
 	}
 	
 	@RequestMapping(value = "/xdm/v1/infra/lecture/LectureXdmInst")
-	public String LectureXdmInst(LectureDto LectureDto) {
+	public String LectureXdmInst(LectureDto lectureDto) {
 //		System.out.println(LectureDto.getLec_StartLearn());
-		LectureService.insert(LectureDto);
+		LectureService.insert(lectureDto);
 		return "redirect:/xdm/v1/infra/lecture/LectureXdmList";
+	}
+	
+//	@RequestMapping(value = "/xdm/v1/infra/lecture/LectureXdmMfom")
+//	public String LectureXdmMfom(LectureDto lectureDto , Model model) {
+//		LectureDto dto = LectureService.selcetOne(lectureDto);
+//		model.addAttribute("item", dto);
+//		return "/xdm/v1/infra/lecture/LectureXdmMfom";
+//	}
+	
+	@RequestMapping(value = "/xdm/v1/infra/lecture/LectureXdmMfom")
+	public String LectureXdmMfom(LectureDto lectureDto , Model model) {
+		model.addAttribute("item", LectureService.selcetOne(lectureDto));
+		return "/xdm/v1/infra/lecture/LectureXdmMfom";
 	}
 	
 }

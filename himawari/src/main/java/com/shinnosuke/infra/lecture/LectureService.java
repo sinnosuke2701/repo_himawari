@@ -22,4 +22,10 @@ public class LectureService {
 			return result;
 		}
 		
+		public LectureDto selcetOne(LectureDto lectureDto) {
+			LectureDto dto = LectureDao.selectOne(lectureDto);
+			return dto;
+		}
+		
+		
 }
