@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class CodeGroupService {
 	
@@ -24,8 +25,8 @@ public class CodeGroupService {
 		
 		
 		//단축형..
-		public int insert(CodeGroupDto CodeGroupDto) {
-			return CodeGroupDao.insert(CodeGroupDto);
+		public int insert(CodeGroupDto codeGroupDto) {
+			return CodeGroupDao.insert(codeGroupDto);
 		}
 
 		
@@ -35,4 +36,14 @@ public class CodeGroupService {
 //			return result;
 //		}
 		
+		
+		 public CodeGroupDto selectOne(CodeGroupDto codeGroupDto){
+			 CodeGroupDto dto = CodeGroupDao.selectOne(codeGroupDto);
+			return dto;
+		}
+		
+//		public CodeGroupDto selectOne(CodeGroupDto codeGroupDto) {
+//			return codeGroupDao.selectOne(codGroupDto);
+//		}
+		 
 }

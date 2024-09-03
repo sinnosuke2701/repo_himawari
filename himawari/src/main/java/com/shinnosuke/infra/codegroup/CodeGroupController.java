@@ -44,21 +44,29 @@ public class CodeGroupController {
 	}
 	
 	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmInst")
-	public String codeGroupXdmInst(CodeGroupDto CodeGroupDto) {
+	public String codeGroupXdmInst(CodeGroupDto codeGroupDto) {
 		
 //		System.out.println("CodeGroupDto.getCg_Name: " + CodeGroupDto.getCg_Name());
 		
-		CodeGroupService.insert(CodeGroupDto);
+		CodeGroupService.insert(codeGroupDto);
 		
 		return "redirect:/xdm/v1/infra/codegroup/codeGroupXdmList";
 	}
 	
+//	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmMfom")
+//	public String codeGroupXdmMfom(CodeGroupDto codeGroupDto, Model model) {
+//		CodeGroupDto dto = CodeGroupService.selectOne(codeGroupDto);
+//		model.addAttribute("item",dto);
+//		return "/xdm/v1/infra/codegroup/codeGroupXdmMfom";
+//	}
+	
 	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmMfom")
-	public String codeGroupXdmMfom() {
-		
-		
-		
+	public String codeGroupXdmMfom(CodeGroupDto codeGroupDto, Model model) {
+		model.addAttribute("item",CodeGroupService.selectOne(codeGroupDto));
 		return "/xdm/v1/infra/codegroup/codeGroupXdmMfom";
 	}
+
+	
+	
 	
 }

@@ -43,5 +43,20 @@
     		,#{cg_DelNY}
 		)
 	</insert>
-	
-</mapper>
+		
+	<select id = "selectOne" resultMap="resultMapObj">
+		select
+			a.seq
+			,a.cg_Name
+			,a.cg_UseNY
+			,a.cg_Order
+			,a.cg_Desc
+			,a.cg_ReDate
+			,a.cg_MoDate
+			,a.cg_DelNY
+		from
+			CodeGroup a
+		where 1 =1
+			and a.seq = #{seq}		
+	</select>
+	</mapper>

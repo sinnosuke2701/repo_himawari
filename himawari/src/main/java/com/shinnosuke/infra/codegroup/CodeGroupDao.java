@@ -9,6 +9,9 @@ public interface CodeGroupDao {
 	
 	List<CodeGroupDto> selectList();
 	
-	public int insert(CodeGroupDto CodeGroupDto);
+	public int insert(CodeGroupDto codeGroupDto);
+	
+	public CodeGroupDto selectOne(CodeGroupDto codeGroupDto);
+		
 	
 }
