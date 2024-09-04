@@ -30,12 +30,13 @@ public class MemberService {
 //	}
 	
 //	public int update(MemberDto memberDto) {
-//		int  a = MemberDao.update(memberDto);
+//		int a = MemberDao.update(memberDto);
 //		return a;
 //	}
 	
 	public int update(MemberDto memberDto) {
 		return MemberDao.update(memberDto);
 	}
+	
 	
 }

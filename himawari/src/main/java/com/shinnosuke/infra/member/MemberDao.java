@@ -13,6 +13,6 @@ public interface MemberDao {
 	
 	public MemberDto selectOne(MemberDto memberDto);
 	
-	public int update(MemberDto	memberDto);
+	public int update(MemberDto memberDto);
 	
 }

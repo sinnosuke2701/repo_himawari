@@ -59,9 +59,10 @@ public class MemberController {
 		return "/xdm/v1/infra/member/MemberXdmMfom";
 	}
 	
-//	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmPdt")
-//	public String MemberXdmPdt(){
-//		return "/xdm/v1/infra/member/MemberXdmPdt";
-//	}
+	@RequestMapping(value = "/xdm/v1/infra/member/MemberXdmPdt")
+	public String MemberXdmPdt(MemberDto memberDto) {
+		MemberService.update(memberDto);
+		return "redirect:/xdm/v1/infra/member/MemberXdmList";
+	}
 	
 }

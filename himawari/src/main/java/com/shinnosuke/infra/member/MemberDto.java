@@ -5,7 +5,7 @@ import java.util.Date;
 public class MemberDto {
 	
 	private String seq;
-	private String mem_Authority;
+	private Integer mem_Authority;
 	private String mem_Name;
 	private String mem_Id;
 	private String mem_Password;
@@ -26,10 +26,10 @@ public class MemberDto {
 	public void setSeq(String seq) {
 		this.seq = seq;
 	}
-	public String getMem_Authority() {
+	public Integer getMem_Authority() {
 		return mem_Authority;
 	}
-	public void setMem_Authority(String mem_Authority) {
+	public void setMem_Authority(Integer mem_Authority) {
 		this.mem_Authority = mem_Authority;
 	}
 	public String getMem_Name() {

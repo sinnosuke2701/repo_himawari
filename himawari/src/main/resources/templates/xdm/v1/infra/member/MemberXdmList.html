@@ -667,9 +667,9 @@
 <!--                                                             <td><a th:href="@{/xdm/v1/infra/codegroup/codeGroupXdmMfom(seq=${List.seq})}" th:text="${List.cg_Name}"></a></td> -->
                                                             <td th:text = "${List.mem_Id}"></td>
                                                             <td th:text = "${List.mem_Password}"></td>
-                                                            <td th:if = "${List.mem_Gender eq 0}">남성</td>
-                                                            <td th:if = "${List.mem_Gender eq 1}">여성</td>
-                                                            <td th:unless="${List.mem_Gender eq 0 or List.mem_Gender eq 1}">기타</td>
+                                                            <td th:text = "${List.mem_Gender}"></td>
+<!--                                                             <td th:if = "${List.mem_Gender eq 0}">남성</td> -->
+<!--                                                             <td th:unless = "${List.mem_Gender eq 0}">여성</td> -->
                                                             <td th:text = "${List.mem_Birth}"></td>
                                                             <td th:text = "${List.mem_Email}"></td>
                                                             <td th:text = "${List.mem_Phone}"></td>
