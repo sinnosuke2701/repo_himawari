@@ -404,74 +404,59 @@
 									<div class="card-body">
 										<div class="container-fluid">
 											<div class="row mb-3">
-												<div class="row mb-3">
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">
-																<div class="">
-																	<label for="validationCustom02" class="form-label">seq<span
+												<div class="col-md-3">
+													<div class="card">
+														<div class="card-body">
+															<label for="validationCustom02" class="form-label">seq<span
 																			style="color: red;">*</span></label>
-																	<input type="text" class="form-control" name="seq" th:value="${item?.seq}">
-																</div>
+															<input type="text" class="form-control" name="seq" th:value="${item?.seq}">
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="card">
+														<div class="card-body">
+															<div class="">
+																<label for="validationCustom02" class="form-label">이름<span
+																			style="color: red;">*</span></label>
+																<input type="text" class="form-control" name="cg_Name" th:value="${item?.cg_Name}">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">
-																<div class="">
-																	<label for="validationCustom02" class="form-label">이름<span
-																			style="color: red;">*</span></label>
-																	<input type="text" class="form-control" name="cg_Name" th:value="${item?.cg_Name}">
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">																
-																<label for="cg_UseNY" class="form-label">사용여부<span
-																	style="color: red;">*</span></label>
-																	<select class="form-select" id="cg_UseNY" name="cg_UseNY">
-																	<option value="0" th:selected="${item?.cg_UseNY == 0}">미사용</option>
+												</div>
+												<div class="col-md-3">
+													<div class="card">
+														<div class="card-body">																
+															<label for="cg_UseNY" class="form-label">사용여부<span
+																style="color: red;">*</span></label>
+															<select class="form-select" id="cg_UseNY" name="cg_UseNY">
+																<option value="0" th:selected="${item?.cg_UseNY == 0}">미사용</option>
 																	<option value="1" th:selected="${item?.cg_UseNY == 1}" >사용</option>
-																</select>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="card">
+														<div class="card-body">
+															<div class="">
+																<label for="validationCustom02" class="form-label">순서<span
+																	style="color: red;">*</span></label>
+																<input type="text" class="form-control" name="cg_Order" th:value="${item?.cg_Order}">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">
-																<div class="">
-																	<label for="validationCustom02" class="form-label">순서<span
-																		style="color: red;">*</span></label>
-																	<input type="text" class="form-control" name="cg_Order" th:value="${item?.cg_Order}">
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">
-																<div class="">
-																	<label for="validationCustom02" class="form-label">설명<span
-																		style="color: red;">*</span></label>
-																	<input type="text" class="form-control" name="cg_Desc" th:value="${item?.cg_Desc}">
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="card">
-															<div class="card-body">
-																<label for="validationCustom04"
-																		class="form-label">삭제여부<span style="color: red;">*</span></label>
-																<select class="form-select" id="validationCustom04" name="cg_DelNY">
-																	<option selected disabled value="">삭제 여부</option>
-																	<option value = "0" th:selected="${item?.cg_DelNY == 0}">미삭제</option>
-																	<option value = "1" th:selected="${item?.cg_DelNY == 1}">삭제</option>
-																</select>
-															</div>
+												</div>
+												<div class="col-md-3">
+													<div class="card">
+														<div class="card-body">
+															<label for="validationCustom04"
+																class="form-label">삭제여부<span style="color: red;">*</span></label>
+															<select class="form-select" id="validationCustom04" name="cg_DelNY">
+																<option selected disabled value="">삭제 여부</option>
+																<option value = "0" th:selected="${item?.cg_DelNY == 0}">미삭제</option>
+																<option value = "1" th:selected="${item?.cg_DelNY == 1}">삭제</option>
+															</select>
 														</div>
 													</div>
 												</div>
