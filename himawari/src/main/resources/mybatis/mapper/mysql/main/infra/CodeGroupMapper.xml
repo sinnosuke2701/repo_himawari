@@ -59,4 +59,17 @@
 		where 1 =1
 			and a.seq = #{seq}		
 	</select>
+		
+	<update id="update">
+		update CodeGroup
+		set
+			cg_Name = #{cg_Name}
+			,cg_UseNY = #{cg_UseNY}
+			,cg_Order = #{cg_Order}
+			,cg_Desc = #{cg_Desc}
+			,cg_DelNY = #{cg_DelNY}
+		where 1 = 1
+			and seq = #{seq}
+	</update>
+	
 	</mapper>

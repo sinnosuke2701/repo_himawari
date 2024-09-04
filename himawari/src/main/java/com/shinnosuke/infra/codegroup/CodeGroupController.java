@@ -65,8 +65,12 @@ public class CodeGroupController {
 		model.addAttribute("item",CodeGroupService.selectOne(codeGroupDto));
 		return "/xdm/v1/infra/codegroup/codeGroupXdmMfom";
 	}
-
 	
+	@RequestMapping(value = "/xdm/v1/infra/codegroup/codeGroupXdmPdt")
+	public String codeGroupXdmPdt(CodeGroupDto codeGroupDto) {
+		CodeGroupService.update(codeGroupDto);
+		return "redirect:/xdm/v1/infra/codegroup/codeGroupXdmList";
+	}
 	
 	
 }
